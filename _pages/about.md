@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Diego Martinez-Baselga"
-excerpt: "Researcher and professor working on Research topic one, Research topic two, and Research topic three."
+excerpt: "Postdoctoral researcher at TU Delft."
 author_profile: true
 redirect_from:
   - /about/
