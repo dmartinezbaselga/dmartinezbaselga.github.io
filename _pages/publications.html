@@ -1,0 +1,27 @@
+---
+layout: archive
+permalink: /publications/
+title: "Publications"
+excerpt: "Preprints, journal articles, conference proceedings, and workshop publications."
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
+<p>For a complete and current citation record, see my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.</p>
+{% endif %}
+
+{% for category in site.publication_category %}
+  <section class="publication-section" aria-labelledby="{{ category[0] }}-heading">
+  <h2 id="{{ category[0] }}-heading">{{ category[1].title }}</h2>
+  {% assign items = site.publications | where: "category", category[0] | sort: "date" | reverse %}
+  {% if items.size > 0 %}
+    <ol class="publication-list">
+    {% for post in items %}
+      {% include publication-single.html post=post %}
+    {% endfor %}
+    </ol>
+  {% else %}
+    <p><em>Publications in this category will be added here.</em></p>
+  {% endif %}
+  </section>
+{% endfor %}

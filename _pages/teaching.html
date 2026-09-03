@@ -1,0 +1,37 @@
+---
+layout: archive
+permalink: /teaching/
+title: "Teaching"
+excerpt: "Current and past courses."
+author_profile: true
+---
+
+<h2>Current courses</h2>
+
+{% if site.data.teaching.current_courses.size > 0 %}
+<ul class="course-list">
+{% for course in site.data.teaching.current_courses %}
+  <li>
+    <strong>{{ course.name }}</strong><br>
+    {{ course.program }} · {{ course.years }}
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<p><em>Current course information will be added here.</em></p>
+{% endif %}
+
+<h2>Past courses</h2>
+
+{% if site.data.teaching.past_courses.size > 0 %}
+<ul class="course-list">
+{% for course in site.data.teaching.past_courses %}
+  <li>
+    <strong>{{ course.name }}</strong><br>
+    {{ course.program }} · {{ course.years }}
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<p><em>Past course information will be added here.</em></p>
+{% endif %}

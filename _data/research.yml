@@ -1,0 +1,10 @@
+# Homepage Research topics. Keep each description to one or two sentences.
+themes:
+  - title: "Motion Planning and Control"
+    description: "Navigation in complex and dynamic environments using learning and optimization methods."
+  - title: "Robot Learning"
+    description: "Scene understanding and decision making combining learning and control."
+  - title: "Multi-Robot Systems"
+    description: "Multi-Robot coordination and collaboration in shared environments."
+  # - title: "Research topic four"
+  #   description: "Optional: remove this entry if three themes describe your programme more clearly."

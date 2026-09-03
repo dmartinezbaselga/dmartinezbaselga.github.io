@@ -1,0 +1,100 @@
+/* Site-specific refinements. Keep custom styles here, separate from the theme. */
+
+.research-themes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.research-theme {
+  border-left: 3px solid var(--global-link-color);
+  padding: 0.1rem 0 0.1rem 1rem;
+}
+
+.research-theme h3 {
+  margin-top: 0;
+}
+
+/* Keep a 175px circular frame and zoom only the image inside it. */
+@include breakpoint($large) {
+  div.author__avatar {
+    position: relative;
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
+    border: 1px solid var(--global-border-color);
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  div.author__avatar > img.author__avatar {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    transform: scale(1.12);
+    transform-origin: center;
+  }
+}
+
+.publication-section {
+  margin-bottom: 2rem;
+}
+
+.publication-list {
+  padding-left: 1.5rem;
+}
+
+.publication-item {
+  margin-bottom: 1.25rem;
+  padding-left: 0.25rem;
+}
+
+.publication-title {
+  color: var(--global-text-color);
+  font-weight: 700;
+}
+
+.publication-authors,
+.publication-details {
+  line-height: 1.55;
+}
+
+.publication-author-highlight {
+  font-style: italic;
+}
+
+.publication-links {
+  white-space: nowrap;
+}
+
+.publication-links a {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 0.35rem;
+}
+
+.publication-links a::before {
+  content: "[";
+}
+
+.publication-links a::after {
+  content: "]";
+}
+
+.people-list li,
+.course-list li {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .research-themes {
+    grid-template-columns: 1fr;
+  }
+}

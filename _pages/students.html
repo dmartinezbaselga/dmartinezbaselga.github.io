@@ -1,0 +1,41 @@
+---
+permalink: /students/
+title: "Students"
+excerpt: "Research opportunities, current students, and alumni."
+author_profile: true
+---
+
+<h2>{{ site.data.people.open_projects.heading }}</h2>
+
+<p>{{ site.data.people.open_projects.text }} <a href="mailto:{{ site.author.email }}">Contact me by email</a>.</p>
+
+<h2>Current students</h2>
+
+{% if site.data.people.current_students.size > 0 %}
+<ul class="people-list">
+{% for person in site.data.people.current_students %}
+  <li>
+    <strong>{% if person.url %}<a href="{{ person.url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</strong><br>
+    {{ person.degree }}, {{ person.affiliation }} · started {{ person.start_year }}
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<p><em>Current student profiles will be added here.</em></p>
+{% endif %}
+
+<h2>Alumni</h2>
+
+{% if site.data.people.alumni.size > 0 %}
+<ul class="people-list">
+{% for person in site.data.people.alumni %}
+  <li>
+    <strong>{% if person.url %}<a href="{{ person.url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</strong><br>
+    {{ person.degree }}, {{ person.affiliation }} · {{ person.start_year }}{% if person.end_year %}–{{ person.end_year }}{% endif %}
+    {% if person.next_position %}<br>Next position: {{ person.next_position }}{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<p><em>Alumni profiles will be added here.</em></p>
+{% endif %}

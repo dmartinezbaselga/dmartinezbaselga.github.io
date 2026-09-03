@@ -1,0 +1,21 @@
+{% assign publication = include.post %}
+{% assign author_to_emphasize = "Martinez-Baselga, D." %}
+{% capture emphasized_author %}<em class="publication-author-highlight">{{ author_to_emphasize }}</em>{% endcapture %}
+<li class="publication-item">
+  <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+    <div class="publication-title" itemprop="headline">{{ publication.title }}</div>
+    {% if publication.authors %}
+      <div class="publication-authors" itemprop="author">{{ publication.authors | replace: author_to_emphasize, emphasized_author }}</div>
+    {% endif %}
+    <div class="publication-details">
+      {% if publication.venue %}<em>{{ publication.venue }}</em>{% endif %}{% if publication.venue and publication.date %}, {% endif %}{% if publication.date %}<time datetime="{{ publication.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ publication.date | date: "%Y" }}</time>{% endif %}.
+      {% if publication.paperurl or publication.codeurl or publication.videourl %}
+        <span class="publication-links" aria-label="Publication resources">
+          {% if publication.paperurl %}<a href="{{ publication.paperurl }}">Paper</a>{% endif %}
+          {% if publication.codeurl %}<a href="{{ publication.codeurl }}">Code</a>{% endif %}
+          {% if publication.videourl %}<a href="{{ publication.videourl }}">Video</a>{% endif %}
+        </span>
+      {% endif %}
+    </div>
+  </article>
+</li>

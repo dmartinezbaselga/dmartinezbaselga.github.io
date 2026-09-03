@@ -1,0 +1,88 @@
+open_projects:
+  heading: "Open projects"
+  text: "I am always interested in hearing from motivated students. If our research interests overlap, please get in touch to discuss possible projects."
+
+# Copy this shape for each current student:
+# - name: "Student Name"
+#   start_year: 2026
+#   affiliation: "University Name"
+#   degree: "PhD"
+#   url: "https://optional-personal-page.example"
+current_students: 
+- name: "Josh Lau"
+  start_year: 2026
+  affiliation: "TU Delft"
+  degree: "MSc"
+  url: #"https://example.com/alice"
+- name: "Denis C. Patrascu"
+  start_year: 2025
+  affiliation: "University of Zaragoza"
+  degree: "MSc"
+  url: #"https://example.com/alice"
+
+
+# Alumni can additionally include `next_position` and `end_year`.
+# - name: "Alumnus Name"
+#   start_year: 2022
+#   end_year: 2026
+#   affiliation: "University Name"
+#   degree: "MSc"
+#   next_position: "Optional next role"
+#   url: "https://optional-personal-page.example"
+alumni:
+- name: "Dion van Santen"
+  start_year: 2026
+  end_year: #2023
+  affiliation: "TU Delft"
+  degree: "BSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
+- name: "Christiaan Peppelman"
+  start_year: 2026
+  end_year: #2023
+  affiliation: "TU Delft"
+  degree: "BSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
+- name: "Sitor Sla"
+  start_year: 2026
+  end_year: #2023
+  affiliation: "TU Delft"
+  degree: "BSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
+- name: "Fardien Azizi"
+  start_year: 2026
+  end_year: #2023
+  affiliation: "TU Delft"
+  degree: "BSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
+- name: "Diego Lanaspa"
+  start_year: 2025
+  end_year: #2023
+  affiliation: "University of Zaragoza"
+  degree: "BSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
+- name: "Jaime Ezpeleta"
+  start_year: 2024
+  end_year: #2023
+  affiliation: "University of Zaragoza"
+  degree: "MSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
+- name: "Celia Mainar"
+  start_year: 2023
+  end_year: #2023
+  affiliation: "University of Zaragoza"
+  degree: "BSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
+- name: "Jorge Martínez"
+  start_year: 2023
+  end_year: #2023
+  affiliation: "University of Zaragoza"
+  degree: "BSc"
+  next_position: #"Optional next role"
+  url: #"https://optional-personal-page.example"
